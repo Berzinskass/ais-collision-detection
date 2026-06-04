@@ -1,0 +1,16 @@
+services:
+  ais-collision:
+    build: .
+    image: ais-collision-detection:latest
+    container_name: ais-collision
+    environment:
+      # Glob of CSV files to process (relative to /app inside the container).
+      AIS_DATA_GLOB: "data/*.csv"
+      AIS_OUTPUT_DIR: "output"
+      # Raise this when processing the full month of data (e.g. "8g").
+      SPARK_DRIVER_MEMORY: "4g"
+    volumes:
+      # Put the unzipped Danish AIS CSVs here on the host.
+      - ./data:/app/data
+      # Results (results.txt + trajectory.png) appear here on the host.
+      - ./output:/app/output

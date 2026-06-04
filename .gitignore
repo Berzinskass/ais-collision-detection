@@ -1,0 +1,21 @@
+# Raw + unzipped AIS data (huge) and generated outputs
+data/
+output/
+*.zip
+*.tar
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
