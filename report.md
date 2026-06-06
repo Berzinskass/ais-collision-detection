@@ -119,12 +119,6 @@ the Danish split hopper barge **Karin Høj** (MMSI 219021240), on
 the search area. Karin Høj capsized shortly after impact, which the AIS track
 reflects as an abrupt end to its position reports.
 
-The synthetic harness (`tests/make_synthetic.py`) validates the full chain end
-to end: it plants a collision, a moored pair 30 m apart, a single GPS jump onto
-the collision point, and a vessel outside the radius. The pipeline reports only
-the planted collision (CPA ≈ 0 m at the correct time) and rejects all three
-traps.
-
 ## 8. Limitations and possible extensions
 
 * The collision threshold and minimum-speed cut are heuristics; tuning them
