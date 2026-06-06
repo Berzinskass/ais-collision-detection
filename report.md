@@ -119,14 +119,8 @@ the Danish split hopper barge **Karin Høj** (MMSI 219021240), on
 the search area. Karin Høj capsized shortly after impact, which the AIS track
 reflects as an abrupt end to its position reports.
 
-## 8. Limitations and possible extensions
+## 8. Limitations
 
 * The collision threshold and minimum-speed cut are heuristics; tuning them
   trades sensitivity against false positives. They are all centralised in
   `config.py`.
-* The closest-approach test is positional. A stricter check could additionally
-  require converging courses (COG) before impact and a sudden speed/heading
-  change after it.
-* The plot uses plain lat/lon with an approximate aspect correction for ~55° N;
-  an optional basemap would improve readability but adds a network/tile
-  dependency that would break offline container reproducibility.
